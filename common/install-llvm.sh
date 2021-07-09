@@ -76,23 +76,26 @@ esac
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
 add-apt-repository "${REPO_NAME}"
 apt-get update
-apt-get install clang-format-$LLVM_VERSION \
+apt-get install -y clang-format-$LLVM_VERSION \
   clang-tidy-$LLVM_VERSION \
   clang-tools-$LLVM_VERSION \
   clang-$LLVM_VERSION \
   clangd-$LLVM_VERSION \
-  libc++-dev-$LLVM_VERSION \
+  libc++-$LLVM_VERSION-dev \
   libc++1-$LLVM_VERSION \
-  libc++abi-dev-$LLVM_VERSION \
+  libc++abi-$LLVM_VERSION-dev \
   libc++abi1-$LLVM_VERSION \
-  libclang-dev\-$LLVM_VERSION \
+  libclang-$LLVM_VERSION-dev \
   libclang1-$LLVM_VERSION \
-  liblldb-dev-$LLVM_VERSION \
-  libllvm-ocaml-dev-$LLVM_VERSION \
-  libomp-dev-$LLVM_VERSION \
+  liblldb-$LLVM_VERSION-dev \
+  libllvm-$LLVM_VERSION-ocaml-dev \
+  libomp-$LLVM_VERSION-dev \
   libomp5-$LLVM_VERSION \
   lld-$LLVM_VERSION \
   lldb-$LLVM_VERSION \
-  llvm-dev-$LLVM_VERSION \
-  llvm-runtime-$LLVM_VERSION \
-  llvm python-clang
+  llvm-$LLVM_VERSION-dev \
+  llvm-$LLVM_VERSION-runtime \
+  llvm-$LLVM_VERSION
+
+  # Currently not available in the apt package repository
+  #python-clang-$LLVM_VERSION
