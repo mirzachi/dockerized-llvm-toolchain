@@ -16,7 +16,7 @@ ENV cmake_version "3.20.5"
 RUN wget https://github.com/Kitware/CMake/releases/download/v${cmake_version}/cmake-${cmake_version}.tar.gz
 RUN tar -xzf cmake-${cmake_version}.tar.gz
 RUN cd cmake-${cmake_version} && \
-    ./bootstrap && make install && \
+    ./bootstrap -- -DCMAKE_USE_OPENSSL=OFF && make install && \
     cd .. && \
     rm -r cmake-*
 
