@@ -36,7 +36,7 @@ jobs:
           context: .
           file: base/Dockerfile
           push: true
-          tags: {% raw %}${{ steps.meta.outputs.tags }}
+          tags: { % raw % }${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
 
