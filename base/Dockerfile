@@ -1,5 +1,5 @@
 # Base image
-FROM ubuntu:21.10
+FROM ubuntu:21.04
 
 # Add some metadata for inspection purposes
 LABEL version="1.0" \
@@ -8,7 +8,7 @@ LABEL version="1.0" \
 
 # Install necessary dependencies and remove the apt cache since we do not need it later on
 RUN apt-get update && \
-    apt-get -y install build-essential git wget && \
+    apt-get -y install build-essential git wget lsb-release wget software-properties-common && \
     rm -rf /var/lib/apt/lists/*
 
 # Download, compile and install cmake
