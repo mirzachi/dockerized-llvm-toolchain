@@ -20,3 +20,4 @@ RUN cd cmake-${cmake_version} && \
     cd .. && \
     rm -r cmake-*
 
+ENTRYPOINT ["/bin/bash"]
