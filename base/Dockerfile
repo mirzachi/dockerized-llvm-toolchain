@@ -12,10 +12,11 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Download, compile and install cmake
-ENV cmake_version "3.21.0"
+ENV cmake_version "3.20.5"
 RUN wget https://github.com/Kitware/CMake/releases/download/v${cmake_version}/cmake-${cmake_version}.tar.gz
 RUN tar -xzf cmake-${cmake_version}.tar.gz
 RUN cd cmake-${cmake_version} && \
     ./bootstrap && make install && \
     cd .. && \
     rm -r cmake-*
+
