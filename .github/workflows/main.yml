@@ -23,7 +23,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ${{ env.REGISTRY }}/dockerized-llvm-toolchain/base
+          images: ${{ env.REGISTRY }}/${{ github.repository_owner }}/dockerized-llvm-toolchain/base
           tags: |
             type=schedule
             type=ref,event=branch
