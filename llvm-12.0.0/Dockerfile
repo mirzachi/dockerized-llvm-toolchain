@@ -1,5 +1,5 @@
 # Base image
-FROM docker.pkg.github.com/mirzachi/dockerized-llvm-toolchain/base:1.0
+FROM ghcr.io/mirzachi/dockerized-llvm-toolchain/base:main
 
 # Add some metadata for inspection purposes
 LABEL version="1.0" \
