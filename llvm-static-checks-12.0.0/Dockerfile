@@ -21,4 +21,4 @@ RUN ls -la /home/root && ./install-llvm-static-checks.sh ${LLVM_VERSION}
 RUN ln -s /usr/bin/clang-tidy-${LLVM_VERSION} /usr/bin/clang-tidy && \
     ln -s /usr/bin/clang-format-${LLVM_VERSION} /usr/bin/clang-format
 
-ENTRYPOINT ["/bin/bash", "-l", "-c"]
+ENTRYPOINT ["/bin/bash"]
